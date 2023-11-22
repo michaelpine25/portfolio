@@ -26,11 +26,11 @@ function WeatherApp() {
   }
 
   const weatherIcons = {
-    "rain": './rain.png',
-    "cloudy": './clouds.png',
-    "partly-cloudy-day": './partial-cloud.png',
-    "clear-day": './sun.png',
-    "snow": './snowy.png',
+    "rain": './src/images/rain.png',
+    "cloudy": './src/images/clouds.png',
+    "partly-cloudy-day": './src/images/partial-cloud.png',
+    "clear-day": './src/images/sun.png',
+    "snow": './src/images/snowy.png',
   }
 
 
@@ -91,7 +91,7 @@ function WeatherApp() {
 
   return (
     <>
-      <div className="flex h-[700px] bg-cover bg-no-repeat justify-center bg-[url('./weather-background.jpg')]">
+      <div className="flex h-[700px] bg-cover bg-no-repeat justify-center bg-[url('./src/images/weather-background.jpg')]">
         <div className="relative h-full w-full rounded-3xl shadow-md overflow-hidden flex flex-col w-full justify-end">
           <div className="absolute top-10 right-10 flex">
             <input
