@@ -272,7 +272,7 @@ export default function Example() {
           <div className="relative overflow-hidden pt-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <img
-                src="./portfolio/chatter-fixed-2.png"
+                src="./chatter-fixed-2.png"
                 alt="App screenshot"
                 className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
                 width={2432}
