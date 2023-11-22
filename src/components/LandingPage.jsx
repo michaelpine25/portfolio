@@ -272,7 +272,7 @@ export default function Example() {
           <div className="relative overflow-hidden pt-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <img
-                src="./assets/chatter-fixed-2.png"
+                src="images/chatter-fixed-2.png"
                 alt="App screenshot"
                 className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
                 width={2432}
@@ -352,7 +352,7 @@ export default function Example() {
               <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
                 <img
                   className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                  src="./assets/MichaelInParis.jpg"
+                  src="images/MichaelInParis.jpg"
                   alt="michaelInParis"
                 />
               </div>

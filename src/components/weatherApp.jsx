@@ -26,11 +26,11 @@ function WeatherApp() {
   }
 
   const weatherIcons = {
-    "rain": './assets/rain.png',
-    "cloudy": './assets/clouds.png',
-    "partly-cloudy-day": './assets/partial-cloud.png',
-    "clear-day": './assets/sun.png',
-    "snow": './assets/snowy.png',
+    "rain": 'images/rain.png',
+    "cloudy": 'images/clouds.png',
+    "partly-cloudy-day": 'images/partial-cloud.png',
+    "clear-day": 'images/sun.png',
+    "snow": 'images/snowy.png',
   }
 
 
