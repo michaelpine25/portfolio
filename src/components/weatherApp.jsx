@@ -26,11 +26,11 @@ function WeatherApp() {
   }
 
   const weatherIcons = {
-    "rain": './images/rain.png',
-    "cloudy": './images/clouds.png',
-    "partly-cloudy-day": './images/partial-cloud.png',
-    "clear-day": './images/sun.png',
-    "snow": './images/snowy.png',
+    "rain": './assets/rain.png',
+    "cloudy": './assets/clouds.png',
+    "partly-cloudy-day": './assets/partial-cloud.png',
+    "clear-day": './assets/sun.png',
+    "snow": './assets/snowy.png',
   }
 
 
@@ -148,28 +148,3 @@ function WeatherApp() {
 }
 
 export default WeatherApp
-
-{/* <div className="border border-solid border-blue-500 px-4 rounded-md bg-white shadow-lg flex flex-col">
-          <div className="pb-5 pt-5 mx-auto">
-            <input
-              className="border px-2 py-1"
-              type="text"
-              placeholder="type a city"
-              value = {city}
-              onChange={handleCityChange}
-            ></input>
-          </div>
-
-          <button onClick={getWeatherData} className="pb-10">Get data</button>
-
-          {loading && (
-            <Loading />
-          )}
-          {weatherData && (
-            <div>
-              <div>{weatherData.resolvedAddress}</div>
-              <div>Temperature: {Math.round( (weatherData.currentConditions.temp * 9/5) + 32 )} F</div>
-            </div>
-          )}
-
-        </div> */}
