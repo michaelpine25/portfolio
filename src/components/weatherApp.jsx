@@ -57,6 +57,14 @@ function WeatherApp() {
     return daysOfTheWeek[day]
   }
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      getWeatherData();
+    }
+  };
+
+
   
   const convertTime = (time) => {
     const date = new Date(time * 1000);
@@ -66,8 +74,6 @@ function WeatherApp() {
     const day = date.getDate();
 
     const formattedDate = `${months[month] < 10 ? '0' : ''}${months[month]} ${day < 10 ? '0' : ''}${day}, ${year}`;
-
-    console.log(formattedDate);
     return formattedDate
 
   }
@@ -78,10 +84,12 @@ function WeatherApp() {
     axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city?city:selectedCity}?unitGroup=metric&key=DSXF4X68F6S6MBDAAMYY38ZT5&contentType=json`)
     .then((response) => {
       setWeatherData(response.data);
-      console.log(response.data);
       handleLoading(false);
+      setCity('');
     }).catch((err) => {
-      console.log("We could not find any weather data on this city", err)
+      console.log("We could not find any weather data on this city", err);
+      handleLoading(false);
+      setCity('');
     })
   }
 
@@ -100,13 +108,14 @@ function WeatherApp() {
               placeholder="type a city..."
               value = {city}
               onChange={handleCityChange}
+              onKeyDown={handleKeyDown}
             ></input>
 
             {loading && (
               <Loading />
             )}
             {!loading && (
-              <button className="pl-7" onClick={getWeatherData}>
+            <button className="pl-7" onClick={getWeatherData}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
               </svg>
