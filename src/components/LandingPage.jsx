@@ -52,6 +52,24 @@ const weatherAppFeatures = [
     icon: FingerPrintIcon,
   },
 ]
+
+const tictactoeFeatures = [
+  {
+    name: 'Framework',
+    description: 'Django backend & React frontend',
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: 'Database',
+    description: 'In order to keep track of users, games, stats, and moves I used MySQL as the database',
+    icon: ArrowPathIcon,
+  },
+  {
+    name: 'Hosting',
+    description: 'I have deployed the backend of my application on an AWS EC2 instance, utilizing Gunicorn as the application server and Nginx as the reverse proxy server',
+    icon: ArrowPathIcon,
+  },
+]
 const tiers = [
   {
     name: 'Hobby',
@@ -263,7 +281,7 @@ export default function Example() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
               <h1 className="text-base font-semibold leading-7 text-gray-800 pb-10 text-4xl sm:text-4xl">Projects</h1>
-              <a href="http://68.183.26.169/" className="mt-2 text-xl font-bold tracking-tight text-blue-500 sm:text-2xl hover:text-blue-500">Chatter</a>
+              <a href="http://68.183.26.169/" className="mt-2 text-xl font-bold tracking-tight text-blue-500 sm:text-2xl hover:text-blue-500 underline">Chatter</a>
               <p className="mt-6 text-lg leading-8 text-gray-400">
                 Chatter is a real time messaging platform where users can create accounts and start group chats with their friends from all over the world. 
               </p>
@@ -295,15 +313,55 @@ export default function Example() {
                 </div>
               ))}
             </dl>
-            
           </div>
         </div>
+
         <div className="mt-20 sm:mt-25">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
-              <a href="http://68.183.26.169/" className="mt-2 text-xl font-bold tracking-tight text-black sm:text-2xl">Weather Tracker</a>
+              <a href="https://tictactoe-frontend-git-main-michaelpine25s-projects.vercel.app/login" className="mt-2 text-xl font-bold tracking-tight text-blue-500 sm:text-2xl hover:text-blue-500 underline">Tic-Tac-Toe</a>
               <p className="mt-6 text-lg leading-8 text-gray-400">
-                My very first react app. I built this weather tracker using visual crossing weather API and due to its simplicity I just plugged it right into this portfolio. Feel free to use it here.
+                Using the Django framework for the backend API and React for the frontend, this Tic-Tac-Toe game allows users to create accounts and play with their friends by simply typing in the game code generated when starting a game. Additionally, this app keeps track of all users' wins, losses, and ties, displaying them in a pie chart on the stats page. 
+              </p>
+            </div>
+          </div>
+          <div className="relative overflow-hidden pt-16">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <img 
+                src="./images/Tic-Tac-Toe.png"
+                alt="App screenshot"
+                className="rounded-xl shadow-2xl ring-1 ring-gray-900/10 shadow-lg"
+                width={2432}
+                height={1442}
+              ></img>
+              <div className="relative" aria-hidden="true">
+                <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
+              </div>
+            </div>
+          </div>
+
+          <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+            <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+              {tictactoeFeatures.map((feature) => (
+                <div key={feature.name} className="relative pl-9">
+                  <dt className="inline font-semibold text-gray-900">
+                    <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                    {feature.name}
+                  </dt>{' '}
+                  <dd className="inline">{feature.description}</dd>
+                </div>
+              ))}
+            </dl>
+            
+          </div>
+        </div>
+
+        <div className="mt-20 sm:mt-25">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl sm:text-center">
+              <p className="mt-2 text-xl font-bold tracking-tight text-black sm:text-2xl">Weather Tracker</p>
+              <p className="mt-6 text-lg leading-8 text-gray-400">
+                My very first React app. I built this weather tracker using visual crossing weather API and due to its simplicity I just plugged it right into this portfolio. Feel free to use it here.
               </p>
             </div>
           </div>
